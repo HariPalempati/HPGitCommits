@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct HPGitCommitsViewModel {
+    var ownerName: String?
+    var repositoryName: String?
+    
+    public init(ownerName: String?, repositoryName: String?) {
+        self.ownerName = ownerName
+        self.repositoryName = repositoryName
+    }
+}

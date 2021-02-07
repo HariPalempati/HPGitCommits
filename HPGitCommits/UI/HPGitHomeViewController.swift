@@ -11,8 +11,6 @@ class HPGitHomeViewController: UIViewController {
     @IBOutlet weak var ownerNameTxtField: UITextField!
     @IBOutlet weak var repositoryNameTxtField: UITextField!
 
-    var viewModel: HPGitHomeViewModel!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +18,17 @@ class HPGitHomeViewController: UIViewController {
 
     @IBAction func navigateToCommitsViewController(_ sender: Any) {
         self.view.endEditing(true)
+        let ownerNameValue = ownerNameTxtField.text
+        let repositoryNameValue = repositoryNameTxtField.text
+
+        let viewModel = HPGitHomeViewModel(ownerName: ownerNameValue, repositoryName: repositoryNameValue)
+
+        if viewModel.isValidOwnerName(), viewModel.isValidRepositoryName() {
+            let commitsViewController = HPGitCommitsViewController()
+            let commitsViewModel = HPGitCommitsViewModel(ownerName: ownerNameValue, repositoryName: repositoryNameValue)
+            commitsViewController.viewModel = commitsViewModel
+            self.navigationController?.pushViewController(commitsViewController, animated: true)
+        }
     }
 }
 
