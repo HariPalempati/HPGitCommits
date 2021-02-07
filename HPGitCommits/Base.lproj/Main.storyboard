@@ -53,6 +53,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="navigateToCommitsViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4G-ud-26k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -75,6 +78,10 @@
                             <constraint firstItem="GuG-q4-GaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p32-Fq-Rlz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ownerNameTxtField" destination="GuG-q4-GaE" id="6uj-6H-nvH"/>
+                        <outlet property="repositoryNameTxtField" destination="7hF-Dm-284" id="t5H-3M-ve3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
