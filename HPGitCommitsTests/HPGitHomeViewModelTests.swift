@@ -26,31 +26,23 @@ class HPGitHomeViewModelTests: XCTestCase {
         XCTAssertNotNil(sut)
     }
 
-    func testOwnerNameShouldNotbeEmpty() {
+    func testIsOwnerNameEmpty() {
         sut = HPGitHomeViewModel(ownerName: "", repositoryName: repositoryNameValue)
-        if let ownerTxtValue = sut.ownerName {
-            XCTAssertTrue(ownerTxtValue.count > 1)
-        }
+        XCTAssertTrue(HPGitHomeViewModel.isOwnerNameEmpty(sut)())
     }
     
-    func testRepositoryNameShouldNotbeEmpty() {
+    func testIsRepositoryNameEmpty() {
         sut = HPGitHomeViewModel(ownerName: ownerNameValue, repositoryName: "")
-        if let repositoryTxtValue = sut.repositoryName {
-            XCTAssertTrue(repositoryTxtValue.count > 1)
-        }
+        XCTAssertTrue(HPGitHomeViewModel.isRepositoryNameEmpty(sut)())
     }
-    
-    func testOwnerNameShouldNotHaveSpaces() {
+
+    func testIsOwnerNameContainsSpaces() {
         sut = HPGitHomeViewModel(ownerName: "Hari Palempati", repositoryName: repositoryNameValue)
-        if let ownerTxtValue = sut.ownerName  {
-            XCTAssertTrue(!ownerTxtValue.contains(" "))
-        }
+        XCTAssertTrue(HPGitHomeViewModel.isOwnerNameContainsSpaces(sut)())
     }
     
-    func testRepositoryNameShouldNotHaveSpaces() {
+    func testIsRepositoryNameContainsSpaces() {
         sut = HPGitHomeViewModel(ownerName: ownerNameValue, repositoryName: "Music Store")
-        if let repositoryTxtValue = sut.repositoryName {
-            XCTAssertTrue(!repositoryTxtValue.contains(" "))
-        }
+        XCTAssertTrue(HPGitHomeViewModel.isRepositoryNameContainsSpaces(sut)())
     }
 }
