@@ -18,6 +18,20 @@ struct HPGitHomeViewModel {
 }
 
 extension HPGitHomeViewModel {
+    func isValidOwnerName() -> Bool {
+        if !isOwnerNameEmpty(), !isOwnerNameContainsSpaces() {
+            return true
+        }
+        return false
+    }
+
+    func isValidRepositoryName() -> Bool {
+        if !isRepositoryNameEmpty(), !isRepositoryNameContainsSpaces() {
+            return true
+        }
+        return false
+    }
+
     func isOwnerNameEmpty() -> Bool {
         if let ownerNameValue = ownerName, ownerNameValue.count > 1 {
             return false

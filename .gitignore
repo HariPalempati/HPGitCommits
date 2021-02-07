@@ -1,3 +1,4 @@
 # XCode user data
 *.xcuserdata
 *.bkup
+*.xcbkptlist
