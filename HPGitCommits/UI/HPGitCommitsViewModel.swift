@@ -8,11 +8,9 @@
 import Foundation
 
 struct HPGitCommitsViewModel {
-    var ownerName: String?
-    var repositoryName: String?
+    var commitsData: [HPGitCommitsResponse]?
     
-    public init(ownerName: String?, repositoryName: String?) {
-        self.ownerName = ownerName
-        self.repositoryName = repositoryName
+    public init(commitsData: [HPGitCommitsResponse]?) {
+        self.commitsData = commitsData
     }
 }

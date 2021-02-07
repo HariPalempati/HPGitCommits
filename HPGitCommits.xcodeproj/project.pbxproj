@@ -29,6 +29,7 @@
 		6F50CD2625D08B91008748C9 /* HPGitCommitsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD2525D08B91008748C9 /* HPGitCommitsService.swift */; };
 		6F50CD2B25D08E86008748C9 /* HPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD2A25D08E86008748C9 /* HPResponse.swift */; };
 		6F50CD3025D0918C008748C9 /* HPGitCommitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD2F25D0918C008748C9 /* HPGitCommitsResponse.swift */; };
+		6F50CD3525D096D1008748C9 /* HPGitCommitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		6F50CD2525D08B91008748C9 /* HPGitCommitsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsService.swift; sourceTree = "<group>"; };
 		6F50CD2A25D08E86008748C9 /* HPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPResponse.swift; sourceTree = "<group>"; };
 		6F50CD2F25D0918C008748C9 /* HPGitCommitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsResponse.swift; sourceTree = "<group>"; };
+		6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				6F50CCE325D066D0008748C9 /* HPGitHomeViewModelTests.swift */,
 				6F50CD0525D0867B008748C9 /* HPGitCommitCellContentViewModelTests.swift */,
+				6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F50CD3525D096D1008748C9 /* HPGitCommitsViewModelTests.swift in Sources */,
 				6F50CCE425D066D0008748C9 /* HPGitHomeViewModelTests.swift in Sources */,
 				6F50CCBA25D05DF3008748C9 /* HPGitCommitsTests.swift in Sources */,
 				6F50CD0625D0867B008748C9 /* HPGitCommitCellContentViewModelTests.swift in Sources */,

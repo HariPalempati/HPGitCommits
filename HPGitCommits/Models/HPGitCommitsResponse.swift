@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct HPGitCommitsResponse {
+public struct HPGitCommitsResponse: Codable {
     var authorName: String?
     var commitHash: String?
     var commitMessage: String?

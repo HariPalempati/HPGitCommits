@@ -60,3 +60,15 @@ extension HPGitHomeViewModel {
         return false
     }
 }
+
+extension HPGitHomeViewModel {
+    func makeGitCommitsService() {
+        if let ownerNameValue = self.ownerName, let repositoryNameValue = self.repositoryName {
+            let baserURL = "https://api.github.com/repos/" + ownerNameValue + "/" + repositoryNameValue + "/commits"
+            if let requestURLValue = URL(string: baserURL) {
+                HPGitCommitsService.shared.getLastestCommits(requestURL: requestURLValue) { (response) in
+                }
+            }
+        }
+    }
+}

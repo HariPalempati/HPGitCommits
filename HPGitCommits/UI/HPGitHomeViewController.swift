@@ -25,7 +25,7 @@ class HPGitHomeViewController: UIViewController {
 
         if viewModel.isValidOwnerName(), viewModel.isValidRepositoryName() {
             let commitsViewController = HPGitCommitsViewController()
-            let commitsViewModel = HPGitCommitsViewModel(ownerName: ownerNameValue, repositoryName: repositoryNameValue)
+            let commitsViewModel = HPGitCommitsViewModel(commitsData: nil)
             commitsViewController.viewModel = commitsViewModel
             self.navigationController?.pushViewController(commitsViewController, animated: true)
         }
