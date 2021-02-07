@@ -19,6 +19,5 @@ class HPGitHomeViewController: UIViewController {
     @IBAction func navigateToCommitsViewController(_ sender: Any) {
         self.view.endEditing(true)
     }
-    
 }
 
