@@ -30,6 +30,7 @@
 		6F50CD2B25D08E86008748C9 /* HPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD2A25D08E86008748C9 /* HPResponse.swift */; };
 		6F50CD3025D0918C008748C9 /* HPGitCommitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD2F25D0918C008748C9 /* HPGitCommitsResponse.swift */; };
 		6F50CD3525D096D1008748C9 /* HPGitCommitsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */; };
+		6F50CD3B25D0A698008748C9 /* HPGitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD3A25D0A698008748C9 /* HPGitHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6F50CD2A25D08E86008748C9 /* HPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPResponse.swift; sourceTree = "<group>"; };
 		6F50CD2F25D0918C008748C9 /* HPGitCommitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsResponse.swift; sourceTree = "<group>"; };
 		6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsViewModelTests.swift; sourceTree = "<group>"; };
+		6F50CD3A25D0A698008748C9 /* HPGitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		6F50CCA125D05DF0008748C9 /* HPGitCommits */ = {
 			isa = PBXGroup;
 			children = (
+				6F50CD3925D0A682008748C9 /* Helpers */,
 				6F50CCAB25D05DF3008748C9 /* Assets.xcassets */,
 				6F50CCDA25D06568008748C9 /* Models */,
 				6F50CCD925D0655E008748C9 /* Services */,
@@ -203,6 +206,14 @@
 				6F50CD3425D096D1008748C9 /* HPGitCommitsViewModelTests.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		6F50CD3925D0A682008748C9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F50CD3A25D0A698008748C9 /* HPGitHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				6F50CD3025D0918C008748C9 /* HPGitCommitsResponse.swift in Sources */,
 				6F50CCA725D05DF0008748C9 /* HPGitHomeViewController.swift in Sources */,
 				6F50CCE925D07D8C008748C9 /* HPGitCommitsCell.swift in Sources */,
+				6F50CD3B25D0A698008748C9 /* HPGitHelper.swift in Sources */,
 				6F50CD0E25D08912008748C9 /* HPGitCommitsViewController.swift in Sources */,
 				6F50CCA325D05DF0008748C9 /* AppDelegate.swift in Sources */,
 				6F50CCF825D07FBD008748C9 /* HPGitCommitCellContentView.swift in Sources */,
