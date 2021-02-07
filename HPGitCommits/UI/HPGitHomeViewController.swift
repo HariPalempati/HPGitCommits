@@ -11,6 +11,8 @@ class HPGitHomeViewController: UIViewController {
     @IBOutlet weak var ownerNameTxtField: UITextField!
     @IBOutlet weak var repositoryNameTxtField: UITextField!
 
+    var viewModel: HPGitHomeViewModel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
