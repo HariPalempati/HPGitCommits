@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		6F50CCA325D05DF0008748C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCA225D05DF0008748C9 /* AppDelegate.swift */; };
 		6F50CCA525D05DF0008748C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCA425D05DF0008748C9 /* SceneDelegate.swift */; };
-		6F50CCA725D05DF0008748C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCA625D05DF0008748C9 /* ViewController.swift */; };
+		6F50CCA725D05DF0008748C9 /* HPGitHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCA625D05DF0008748C9 /* HPGitHomeViewController.swift */; };
 		6F50CCAA25D05DF0008748C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F50CCA825D05DF0008748C9 /* Main.storyboard */; };
 		6F50CCAC25D05DF3008748C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F50CCAB25D05DF3008748C9 /* Assets.xcassets */; };
 		6F50CCAF25D05DF3008748C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F50CCAD25D05DF3008748C9 /* LaunchScreen.storyboard */; };
 		6F50CCBA25D05DF3008748C9 /* HPGitCommitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCB925D05DF3008748C9 /* HPGitCommitsTests.swift */; };
 		6F50CCC525D05DF3008748C9 /* HPGitCommitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCC425D05DF3008748C9 /* HPGitCommitsUITests.swift */; };
+		6F50CCDF25D066BA008748C9 /* HPGitHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCDE25D066BA008748C9 /* HPGitHomeViewModel.swift */; };
+		6F50CCE425D066D0008748C9 /* HPGitHomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CCE325D066D0008748C9 /* HPGitHomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		6F50CC9F25D05DF0008748C9 /* HPGitCommits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPGitCommits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F50CCA225D05DF0008748C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F50CCA425D05DF0008748C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6F50CCA625D05DF0008748C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F50CCA625D05DF0008748C9 /* HPGitHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitHomeViewController.swift; sourceTree = "<group>"; };
 		6F50CCA925D05DF0008748C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F50CCAB25D05DF3008748C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F50CCAE25D05DF3008748C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		6F50CCC025D05DF3008748C9 /* HPGitCommitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPGitCommitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F50CCC425D05DF3008748C9 /* HPGitCommitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsUITests.swift; sourceTree = "<group>"; };
 		6F50CCC625D05DF3008748C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F50CCDE25D066BA008748C9 /* HPGitHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitHomeViewModel.swift; sourceTree = "<group>"; };
+		6F50CCE325D066D0008748C9 /* HPGitHomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitHomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +103,13 @@
 		6F50CCA125D05DF0008748C9 /* HPGitCommits */ = {
 			isa = PBXGroup;
 			children = (
+				6F50CCAB25D05DF3008748C9 /* Assets.xcassets */,
+				6F50CCDA25D06568008748C9 /* Models */,
+				6F50CCD925D0655E008748C9 /* Services */,
+				6F50CCD525D064EA008748C9 /* UI */,
 				6F50CCA225D05DF0008748C9 /* AppDelegate.swift */,
 				6F50CCA425D05DF0008748C9 /* SceneDelegate.swift */,
-				6F50CCA625D05DF0008748C9 /* ViewController.swift */,
 				6F50CCA825D05DF0008748C9 /* Main.storyboard */,
-				6F50CCAB25D05DF3008748C9 /* Assets.xcassets */,
 				6F50CCAD25D05DF3008748C9 /* LaunchScreen.storyboard */,
 				6F50CCB025D05DF3008748C9 /* Info.plist */,
 			);
@@ -115,6 +121,7 @@
 			children = (
 				6F50CCB925D05DF3008748C9 /* HPGitCommitsTests.swift */,
 				6F50CCBB25D05DF3008748C9 /* Info.plist */,
+				6F50CCE325D066D0008748C9 /* HPGitHomeViewModelTests.swift */,
 			);
 			path = HPGitCommitsTests;
 			sourceTree = "<group>";
@@ -126,6 +133,29 @@
 				6F50CCC625D05DF3008748C9 /* Info.plist */,
 			);
 			path = HPGitCommitsUITests;
+			sourceTree = "<group>";
+		};
+		6F50CCD525D064EA008748C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6F50CCA625D05DF0008748C9 /* HPGitHomeViewController.swift */,
+				6F50CCDE25D066BA008748C9 /* HPGitHomeViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6F50CCD925D0655E008748C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6F50CCDA25D06568008748C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F50CCA725D05DF0008748C9 /* ViewController.swift in Sources */,
+				6F50CCDF25D066BA008748C9 /* HPGitHomeViewModel.swift in Sources */,
+				6F50CCA725D05DF0008748C9 /* HPGitHomeViewController.swift in Sources */,
 				6F50CCA325D05DF0008748C9 /* AppDelegate.swift in Sources */,
 				6F50CCA525D05DF0008748C9 /* SceneDelegate.swift in Sources */,
 			);
@@ -268,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F50CCE425D066D0008748C9 /* HPGitHomeViewModelTests.swift in Sources */,
 				6F50CCBA25D05DF3008748C9 /* HPGitCommitsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
