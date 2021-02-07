@@ -10,7 +10,7 @@ import Foundation
 public class HPGitCommitsService {
     static let shared = HPGitCommitsService()
     
-    func getLastestCommits() -> Void {
+    func getLastestCommits(completion: @escaping (HPResponse?) -> Void) {
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
         let url = URL(fileURLWithPath: "")
         let dataTask = session.dataTask(with: url) { (data, response, error) in
