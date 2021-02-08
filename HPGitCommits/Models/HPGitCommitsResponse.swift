@@ -7,16 +7,26 @@
 
 import Foundation
 
-public struct HPGitCommitsResponse: Codable {
-    var authorName: String?
-    var commitHash: String?
-    var commitMessage: String?
-    var error: String?
+public struct HPGitCommitsResponse: Decodable, Equatable {
+    var commitHash: String
+    var commit: Commit
     
-    init(authorName: String?, commitHash: String?, commitMessage: String?, error: String? = nil) {
-        self.authorName = authorName
-        self.commitHash = commitHash
-        self.commitMessage = commitMessage
-        self.error = error
+    enum CodingKeys: String, CodingKey {
+        case commitHash = "sha"
+        case commit
+    }
+}
+
+struct Commit: Decodable, Equatable {
+    let author: Author
+    let message: String
+}
+
+struct Author: Decodable, Equatable {
+    let name: String
+    let email: String
+    
+    var authorString: String {
+        return "\(name) <\(email)>"
     }
 }
