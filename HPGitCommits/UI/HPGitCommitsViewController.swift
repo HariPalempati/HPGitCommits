@@ -31,7 +31,8 @@ extension HPGitCommitsViewController: UITableViewDataSource, UITableViewDelegate
                 return UITableViewCell()
             }
             let commitData = commitsDataValue[indexPath.row]
-            cell.configureCellWith(commitData: commitData)
+            cell.viewModel = HPGitCommitsCellViewModel(commitData: commitData)
+            cell.bindViewModel()
             return cell
         }
         return UITableViewCell()

@@ -9,19 +9,28 @@ import UIKit
 
 class HPGitCommitsCell: UITableViewCell {
     static let reuseIdentifier: String = "HPGitCommitsCell"
+
     @IBOutlet weak var contentContainerView: UIStackView!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var commitHashLabel: UILabel!
     @IBOutlet weak var commitMessageLabel: UILabel!
     
+    var viewModel: HPGitCommitsCellViewModel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCellWith(commitData: HPGitCommitsResponse) {
-        authorLabel.text = commitData.commit.author.name
-        commitHashLabel.text = commitData.commitHash
-        commitMessageLabel.text = commitData.commit.message
+    func setUI() {
+        authorLabel.text = viewModel.author ?? ""
+        commitHashLabel.text = viewModel.hash ?? ""
+        commitMessageLabel.text = viewModel.message ?? ""
+    }
+}
+
+extension HPGitCommitsCell: Bindable {
+    func bindViewModel() {
+        setUI()
     }
 }
 
