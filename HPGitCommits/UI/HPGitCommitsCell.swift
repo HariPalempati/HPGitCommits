@@ -22,19 +22,27 @@ class HPGitCommitsCell: UITableViewCell {
         authorLabel.text = commitData.commit.author.name
         commitHashLabel.text = commitData.commitHash
         commitMessageLabel.text = commitData.commit.message
-//        let commitHashContentView = HPGitCommitCellContentView()
-//        let commitHashContentViewModel = HPGitCommitCellContentViewModel(title: "Commit Hash:", description: commitData.commitHash)
-//        commitHashContentView.viewModel = commitHashContentViewModel
-//        contentContainerView.addArrangedSubview(commitHashContentView)
-//        
-//        let authorContentView = HPGitCommitCellContentView()
-//        let authorContentViewModel = HPGitCommitCellContentViewModel(title: "Author:", description: commitData.commit.author.name)
-//        authorContentView.viewModel = authorContentViewModel
-//        contentContainerView.addArrangedSubview(authorContentView)
-//
-//        let commitMessageContentView = HPGitCommitCellContentView()
-//        let commitMessageContentViewModel = HPGitCommitCellContentViewModel(title: "Commit message:", description: commitData.commit.message)
-//        commitMessageContentView.viewModel = commitMessageContentViewModel
-//        contentContainerView.addArrangedSubview(commitMessageContentView)
     }
 }
+
+/*
+//TODO: Can use commonView instaed of using six labels but this is not working right now, as cell height is not getting updated based on the stackView.
+extension HPGitCommitsCell {
+    func configureCellUsingCommonView(with commitData: HPGitCommitsResponse) {
+        let commitHashContentView = HPGitCommitCellContentView()
+        let commitHashContentViewModel = HPGitCommitCellContentViewModel(title: "Commit Hash:", description: commitData.commitHash)
+        commitHashContentView.viewModel = commitHashContentViewModel
+        contentContainerView.addArrangedSubview(commitHashContentView)
+        
+        let authorContentView = HPGitCommitCellContentView()
+        let authorContentViewModel = HPGitCommitCellContentViewModel(title: "Author:", description: commitData.commit.author.name)
+        authorContentView.viewModel = authorContentViewModel
+        contentContainerView.addArrangedSubview(authorContentView)
+        
+        let commitMessageContentView = HPGitCommitCellContentView()
+        let commitMessageContentViewModel = HPGitCommitCellContentViewModel(title: "Commit message:", description: commitData.commit.message)
+        commitMessageContentView.viewModel = commitMessageContentViewModel
+        contentContainerView.addArrangedSubview(commitMessageContentView)
+    }
+}
+*/
