@@ -15,24 +15,11 @@ public class HPGitCommitsService {
     func getLastestCommits(requestURL: URL, completion: @escaping serviceCompletion) {
         let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
         let dataTask = session.dataTask(with: requestURL) { (data, response, error) in
-            //            let hpResponse = HPResponse()
-            //
-            //            if let error = error {
-            //                hpResponse.setRawError(error)
-            //            } else {
-            //                if let response = response, let data = data {
-            //                    if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-            //                        hpResponse.setData(data)
-            //                        hpResponse.setURLResponse(response)
-            //                        completion(hpResponse)
-            //                    }
-            //                }
-            //            }
             if let errorValue = error {
-                completion(nil, nil)
+                completion(nil, errorValue)
                 return
             } else {
-                if let responseValue = response, let dataValue = data {
+                if let dataValue = data {
                     self.handleLatestCommitsResponse(response: dataValue, completion: completion)
                 }
             }

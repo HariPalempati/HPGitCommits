@@ -38,6 +38,7 @@
 		6F50CD7325D0EFB3008748C9 /* HPGitCommitsCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD7225D0EFB3008748C9 /* HPGitCommitsCellViewModelTests.swift */; };
 		6F50CD7925D0F2C9008748C9 /* HPGitUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50CD7825D0F2C9008748C9 /* HPGitUtility.swift */; };
 		6F50CD8125D0F3D2008748C9 /* MockValidCommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F50CD8025D0F3D2008748C9 /* MockValidCommitsResponse.json */; };
+		6F50CD8925D0FA29008748C9 /* MockInValidCommitsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F50CD8825D0FA29008748C9 /* MockInValidCommitsResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		6F50CD7225D0EFB3008748C9 /* HPGitCommitsCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitCommitsCellViewModelTests.swift; sourceTree = "<group>"; };
 		6F50CD7825D0F2C9008748C9 /* HPGitUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPGitUtility.swift; sourceTree = "<group>"; };
 		6F50CD8025D0F3D2008748C9 /* MockValidCommitsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockValidCommitsResponse.json; sourceTree = "<group>"; };
+		6F50CD8825D0FA29008748C9 /* MockInValidCommitsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockInValidCommitsResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				6F50CD8025D0F3D2008748C9 /* MockValidCommitsResponse.json */,
+				6F50CD8825D0FA29008748C9 /* MockInValidCommitsResponse.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F50CD8925D0FA29008748C9 /* MockInValidCommitsResponse.json in Resources */,
 				6F50CD8125D0F3D2008748C9 /* MockValidCommitsResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
