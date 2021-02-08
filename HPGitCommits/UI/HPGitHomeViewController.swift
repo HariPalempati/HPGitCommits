@@ -22,12 +22,17 @@ class HPGitHomeViewController: UIViewController {
         let repositoryNameValue = repositoryNameTxtField.text
 
         let viewModel = HPGitHomeViewModel(ownerName: ownerNameValue, repositoryName: repositoryNameValue)
-
         if viewModel.isValidOwnerName(), viewModel.isValidRepositoryName() {
-            let commitsViewController = HPGitCommitsViewController()
-            let commitsViewModel = HPGitCommitsViewModel(commitsData: nil)
-            commitsViewController.viewModel = commitsViewModel
-            self.navigationController?.pushViewController(commitsViewController, animated: true)
+            viewModel.makeGitCommitsService { (response, error) in
+                if let responseValue = response {
+                    DispatchQueue.main.async {
+                        let commitsViewController = HPGitCommitsViewController()
+                        let commitsViewModel = HPGitCommitsViewModel(commitsData: responseValue)
+                        commitsViewController.viewModel = commitsViewModel
+                        self.navigationController?.pushViewController(commitsViewController, animated: true)
+                    }
+                }
+            }
         }
     }
 }
