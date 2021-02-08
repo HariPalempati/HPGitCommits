@@ -24,9 +24,4 @@ struct Commit: Decodable, Equatable {
 
 struct Author: Decodable, Equatable {
     let name: String
-    let email: String
-    
-    var authorString: String {
-        return "\(name) <\(email)>"
-    }
 }

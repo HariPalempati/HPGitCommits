@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HPGitCommitsViewController" customModule="HPGitCommits" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="yda-nj-wer" id="7O3-H7-hHg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Qk9-Jc-v1R"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
