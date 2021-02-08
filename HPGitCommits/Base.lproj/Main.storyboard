@@ -50,6 +50,23 @@
                                     <action selector="navigateToCommitsViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4G-ud-26k"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wX0-3L-NNm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="112"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitcommit" translatesAutoresizingMaskIntoConstraints="NO" id="1Ms-Ti-bZU">
+                                        <rect key="frame" x="157" y="-19" width="100" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="DDM-wl-jTb"/>
+                                            <constraint firstAttribute="height" constant="150" id="W7v-6K-WlP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="1Ms-Ti-bZU" firstAttribute="centerY" secondItem="wX0-3L-NNm" secondAttribute="centerY" id="UEi-G2-112"/>
+                                    <constraint firstItem="1Ms-Ti-bZU" firstAttribute="centerX" secondItem="wX0-3L-NNm" secondAttribute="centerX" id="gIv-MK-lKD"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-q4-GaE">
                                 <rect key="frame" x="16" y="223.5" width="382" height="50"/>
                                 <constraints>
@@ -70,13 +87,17 @@
                             <constraint firstItem="8xR-Qg-fyF" firstAttribute="top" secondItem="GuG-q4-GaE" secondAttribute="bottom" constant="10" id="JhX-eC-ZYW"/>
                             <constraint firstItem="GuG-q4-GaE" firstAttribute="top" secondItem="SQD-MH-gL4" secondAttribute="bottom" constant="3" id="MFg-Ir-gwR"/>
                             <constraint firstItem="8xR-Qg-fyF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nu7-Ga-g1p"/>
+                            <constraint firstItem="wX0-3L-NNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ozo-e3-raP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fxp-4Y-d1k" secondAttribute="trailing" constant="16" id="TvL-Ny-S5T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wX0-3L-NNm" secondAttribute="trailing" id="Vpd-ez-zYR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8xR-Qg-fyF" secondAttribute="trailing" constant="25" id="WDP-f2-kps"/>
                             <constraint firstItem="Fxp-4Y-d1k" firstAttribute="top" secondItem="7hF-Dm-284" secondAttribute="bottom" constant="30" id="WgF-yu-MFO"/>
                             <constraint firstItem="7hF-Dm-284" firstAttribute="top" secondItem="8xR-Qg-fyF" secondAttribute="bottom" constant="3" id="ZdA-7H-tlS"/>
+                            <constraint firstItem="SQD-MH-gL4" firstAttribute="top" secondItem="wX0-3L-NNm" secondAttribute="bottom" id="eZF-kK-vlf"/>
                             <constraint firstItem="7hF-Dm-284" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nSs-wQ-BfD"/>
                             <constraint firstItem="GuG-q4-GaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="p32-Fq-Rlz"/>
                             <constraint firstItem="SQD-MH-gL4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="pXF-Y9-D3P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="wX0-3L-NNm" secondAttribute="top" id="rIe-tt-y96"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="HPGitCommits" id="MlH-mH-lqF"/>
@@ -109,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gitcommit" width="446" height="510"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

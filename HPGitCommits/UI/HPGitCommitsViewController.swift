@@ -14,7 +14,6 @@ class HPGitCommitsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.navigationItem.title = "Commits"
         tableView.register(UINib.init(nibName: "HPGitCommitsCell", bundle: nil), forCellReuseIdentifier: HPGitCommitsCell.reuseIdentifier)
     }
